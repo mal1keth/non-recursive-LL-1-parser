@@ -4,7 +4,7 @@ Work in progress.
 
 
 1. Write grammar specifications in grammar.txt. The format is:
-    <non-terminal>:<non-terminal><terminal>|   // <- indicates epsilon
+    ``<non-terminal>:<non-terminal><terminal>|``   // <- indicates epsilon
 2. Both non-terminal and terminal should be single characters. 
 3. The grammar should be LL(1) and not left recursive.
 4. Run ```make build ``` to compile
