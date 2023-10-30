@@ -60,7 +60,6 @@ char_set compute_first(char nt, node ** G, int n){
         printf("Error, %c not found in G\n", nt);
         return s;
     }
-    printf("check %c\n", nt);
     node *p = G[ind]->next;
     int eps_in = 0;
     while(p){

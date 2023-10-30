@@ -38,12 +38,13 @@ int is_nonterm(char t){
     }
     return 0;
 }
-// E-> T X.
-// X-> + T X | - T X |. 
-// T-> F Y.
-// Y-> * F Y | / F Y |. 
-// F-> ( E ) | N.
-// N-> 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10.
+// Sample LL(1) grammar to try
+// <S>:<T><X>
+// <X>:+<T><X>|-<T><X>| 
+// <T>:<F><Y>
+// <Y>:*<F><Y>|/<F><Y>| 
+// <F>:(<S>)|<N>
+// <N>:0|1|2|3|4|5|6|7|8|9
 
 int main(){
 
@@ -114,6 +115,7 @@ int main(){
             inp[p] = '\0';
             p = p + 1;
         }
+        printf("------------Parsing Steps------------\n");
         int ret = predictive_parsing(inp, p_table);
         if(ret){
             printf("Successfully Parsed\n");
