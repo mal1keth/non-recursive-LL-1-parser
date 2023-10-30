@@ -152,7 +152,6 @@ char_set compute_follow(ff * sets, char nt, node ** G, int n){
 void compute_first_all(ff * sets, node **G, int n){
     for(int i = 0; i < n; i++){
         char nt = G[i]->s[0].data;
-        printf("%c\n", nt);
         char_set fs = compute_first(nt, G, n);
         sets[i].non_terminal = nt;
         sets[i].first = fs;

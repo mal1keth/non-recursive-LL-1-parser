@@ -28,7 +28,7 @@ int predictive_parsing(char * s, char * p_table[128][128]){
             pop(st);
             
             if(prod[2] == eps) {
-                printf("%c -> eps, ", X);
+                printf("%c -> #, ", X);
                 continue;
             }
             else printf("%c -> ", X);
