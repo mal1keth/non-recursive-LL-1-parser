@@ -100,21 +100,27 @@ int main(){
     print_table(p_table);
     printf("\n");
     
-    printf("Input String: ");
-    char inp[MAX_INP_SZ];
-    fgets(inp, sizeof(inp), stdin);
-    {
-        int p = strlen(inp);
-        inp[p-1] = '$';
-        inp[p] = '\0';
-        p = p + 1;
-    }
-    int ret = predictive_parsing(inp, p_table);
-    if(ret){
-        printf("Successfully Parsed\n");
-    }
-    else{
-        printf("Error in Parsing\n");
+    while(1){
+        printf("Input String: ");
+        char inp[MAX_INP_SZ];
+        fgets(inp, sizeof(inp), stdin);
+        {
+            int p = strlen(inp);
+
+            inp[p-1] = '\0';
+            if(strcmp(inp, "exit") == 0) break;
+
+            inp[p-1] = '$';
+            inp[p] = '\0';
+            p = p + 1;
+        }
+        int ret = predictive_parsing(inp, p_table);
+        if(ret){
+            printf("Successfully Parsed\n");
+        }
+        else{
+            printf("Error in Parsing\n");
+        }
     }
     grammar_destructor(G,n);
     table_destructor(p_table);
