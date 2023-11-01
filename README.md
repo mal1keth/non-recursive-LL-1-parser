@@ -10,6 +10,7 @@ Work in progress.
 4. Run ```make build ``` to compile
 5. Enter a string through stdin and press enter.
 
+``#`` denotes epsilon in the output
 
 Data Structures:
 
