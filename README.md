@@ -29,3 +29,9 @@ Data Structures:
 7. Parse Table is represented as a 2D array of char pointers. Assignment is done as M[N][T] = prod where N, T are characters and prod is a char pointer.
 
 8. Stack : Simple stack data structure with helper functions, which uses table doubling.
+
+Open Challenges : 
+
+1. Implement function eliminate direct left recursion
+2. Implement function to eliminate all left-recursion
+3. Refactor ff as written above in 6.
