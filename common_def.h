@@ -3,7 +3,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#define g_sz 1000
+#define MAX_G_SZ 1000
+#define MAX_PROD_SZ 100
 #define eps '#'
 
 
@@ -14,7 +15,7 @@ typedef struct symbol{
 
 typedef struct Node{
     int n;
-    sym s[100];
+    sym s[MAX_PROD_SZ];
     struct Node *next;
 }node;
 

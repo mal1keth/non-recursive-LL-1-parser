@@ -1,10 +1,9 @@
 
-#include "common_def.h"
-#include "helpers.h"
+#include "input_grammar.h"
 
 char ** read_file(char * path, int * line_count){
 FILE *f_p;
-    char buffer[g_sz];
+    char buffer[MAX_G_SZ];
     f_p = fopen(path, "r");
 
     if (f_p == NULL) {
@@ -18,7 +17,7 @@ FILE *f_p;
     
     
     // Read lines from the file until the end of the file is reached
-    while (fgets(buffer, g_sz, f_p) != NULL) {
+    while (fgets(buffer, MAX_G_SZ, f_p) != NULL) {
         if(*line_count == lines_sz){{
             lines_sz *= 2;
             lines = (char**)realloc(lines, lines_sz * sizeof(char*));

@@ -1,11 +1,11 @@
 
 #include "common_def.h"
+#include "input_grammar.h"
 #include "helpers.h"
 #include "first_follow.h"
 #include "parse_table.h"
 #include "parser.h"
 #define MAX_INP_SZ 1024
-extern gramm input();
 
 
 char *non_term, *term;
