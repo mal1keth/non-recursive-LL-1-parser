@@ -19,7 +19,7 @@ Data Structures:
 
 3. gramm: Dummy struct created to be able to return the Grammar G and number of non-terminal n, in one go from input function. (Is there a better way?)
 
-4. Grammar G: is represented as an array of linked lists. The array has size n for number of non-terminals and each cell i has a linked list, which is the productions of G[i].
+4. Grammar G: is represented as an array of linked lists. The array has size n for number of non-terminals and each cell i has a linked list, which are the productions of G[i].
 
 5. char_set: Struct which simply contains an array of characters called items. Default size is 128.
 
