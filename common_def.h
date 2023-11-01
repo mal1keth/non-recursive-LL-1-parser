@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 #define MAX_G_SZ 1000
-#define MAX_PROD_SZ 100
+#define MAX_PROD_SZ 128
 #define eps '#'
 
 

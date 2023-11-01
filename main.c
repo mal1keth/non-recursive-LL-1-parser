@@ -40,17 +40,14 @@ int is_nonterm(char t){
 }
 // Sample LL(1) grammar to try
 // <S>:<T><X>
-// <X>:+<T><X>|-<T><X>| 
+// <X>:+<T><X>|-<T><X>|
 // <T>:<F><Y>
-// <Y>:*<F><Y>|/<F><Y>| 
+// <Y>:*<F><Y>|/<F><Y>|
 // <F>:(<S>)|<N>
 // <N>:0|1|2|3|4|5|6|7|8|9
 
 int main(){
 
-    /* */
-    
-    /* */
     {
         gramm g = input(G);
         n = g.n;
